@@ -1,6 +1,7 @@
 {
   "extends": "../node_modules/assemblyscript/std/assembly.json",
   "include": [
-    "./**/*.ts"
+    "./**/*.ts",
+    "../node_modules/**/*/as_types.d.ts"
   ]
 }

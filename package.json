@@ -13,11 +13,10 @@
     "asp:ci": "asp",
     "asp": "yarn asp:ci --verbose"
   },
-  "dependencies": {
-    "near-bindgen-as": "^1.1.2",
-    "near-runtime-ts": "^0.5.1"
-  },
   "devDependencies": {
+    "near-bindgen-as": "^1.1.2",
+    "near-runtime-ts": "^0.6.1",
+    "@as-pect/cli": "^2.8.0",
     "assemblyscript": "^0.8.1",
     "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
@@ -25,7 +24,6 @@
     "jest-environment-node": "^24.8.0",
     "near-shell": "^0.18.0",
     "serve": "^11.1.0",
-    "@as-pect/cli": "^2.8.0",
     "wasm-mock-vm": "^1.1.0"
   },
   "wasmStudio": {
