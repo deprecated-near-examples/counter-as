@@ -20,6 +20,10 @@ github:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - before: nvm install v12.0.0 && nvm use --default v12.0.0 && npm install -g yarn # runs during prebuild
+  - before: nvm use default
     init: yarn
     command: yarn asp
+
+ports:
+  - port: 3030
+    onOpen: open-preview

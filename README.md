@@ -1,4 +1,5 @@
 # Counter example in AssemblyScript
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nearprotocol/counter)
 
 ## Description
 
@@ -8,21 +9,15 @@ Contract in `assembly/main.ts` provides methods to increment / decrement counter
 Plus and minus buttons increase and decrease value correspondingly. When button L is toggled, counter will add or minus 10 a time. RS button is for reset. LE and RE buttons to let the robot wink to you.
 
 ## To Run
-
-*In NEAR Studio (https://studio.nearprotocol.com)*
-
-1. Click the "Run" button on the top of the Studio window
-
-2. You will be redirected to the new window that should display instructions for using counter from JS console.
-
+```
+yarn start
+```
 
 ## To Test
 
-*In NEAR Studio (https://studio.nearprotocol.com)*
-
-1. Click the "Test" button on the top of the Studio window
-
-2. You will be redirected to the output for the JavaScript tests described in `src/test.js` to show that the contract is performing properly.
+```
+yarn test
+```
 
 ## To Explore
 

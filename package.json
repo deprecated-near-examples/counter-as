@@ -1,5 +1,5 @@
 {
-  "name": "@wasm/counter_ts",
+  "name": "counter",
   "description": "# Counter Smart Contract\n\nThis project contains implementation of counter backed by blockchain.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
   "version": "0.0.1",
   "scripts": {
@@ -14,15 +14,12 @@
     "asp": "yarn asp:ci --verbose"
   },
   "devDependencies": {
-    "near-bindgen-as": "^1.1.2",
-    "near-runtime-ts": "^0.6.1",
-    "@as-pect/cli": "^2.8.0",
-    "assemblyscript": "^0.8.1",
+    "assemblyscript": "^0.9.2",
     "gh-pages": "^2.1.1",
     "jest": "^24.8.0",
     "jest-environment-node": "^24.8.0",
-    "near-shell": "^0.18.0",
-    "serve": "^11.1.0",
-    "wasm-mock-vm": "^1.1.0"
+    "near-as-sdk": "^0.1.0",
+    "near-shell": "^0.20.1",
+    "serve": "^11.1.0"
   }
 }
