@@ -1,3 +1,5 @@
+image:
+  file: .gitpod.Dockerfile
 # Options to prebuild the image after github events and set notifications/badges
 github:
   prebuilds:
