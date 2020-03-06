@@ -22,10 +22,10 @@ github:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - before: nvm use default
+  - before: #nvm use default
     init: yarn
     command: yarn asp
 
 ports:
-  - port: 3030
+  - port: 1234
     onOpen: open-preview
