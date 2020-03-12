@@ -27,5 +27,5 @@ tasks:
     command: yarn asp
 
 ports:
-  - port: 3030
+  - port: 1234
     onOpen: open-preview

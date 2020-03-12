@@ -6,7 +6,7 @@ import {
 } from '../main';
 
 import { VM } from "wasm-mock-vm";
-import { storage } from 'near-runtime-ts';
+import { context, storage } from 'near-runtime-ts';
 
 describe("Counter ", () => {
     it("should increment by one", () => {
@@ -61,7 +61,11 @@ describe("Counter ", () => {
             expect(getCounter()).not.toBe(0, "0 - 1 != 0");
             expect(getCounter()).toBe(-1, "0 - 1 = -1");
         });
-    })
+    });
+
+    it("should be eve's account", () => {
+        expect(context.contractName).toBe("eve");
+    });
 });
 
 

@@ -1,3 +1,10 @@
+import "regenerator-runtime/runtime";
+import * as nearlib from "nearlib";
+import getConfig from "./config";
+
+let nearConfig = getConfig(process.env.NODE_ENV || "development");
+window.nearConfig = nearConfig;
+
 // Connects to NEAR and provides `near`, `walletAccount` and `contract` objects in `window` scope
 async function connect() {
   // Initializing connection to the NEAR node.
@@ -45,13 +52,13 @@ document.querySelector('#plus').addEventListener('click', ()=>{
   document.querySelectorAll('button').forEach(button => button.disabled = true);
   document.querySelector('#show').classList.replace('number','loader');
   document.querySelector('#show').innerText = '';
-  contract.incrementCounter({value:value}).then(updateUI);
+  contract.incrementCounter({value}).then(updateUI);
 });
 document.querySelector('#minus').addEventListener('click', ()=>{
   document.querySelectorAll('button').forEach(button => button.disabled = true);
   document.querySelector('#show').classList.replace('number','loader');
   document.querySelector('#show').innerText = '';
-  contract.decrementCounter({value:value}).then(updateUI);
+  contract.decrementCounter({value}).then(updateUI);
 });
 document.querySelector('#a').addEventListener('click', ()=>{
   document.querySelectorAll('button').forEach(button => button.disabled = true);

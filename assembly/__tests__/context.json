@@ -1,5 +1,5 @@
 {
-    "current_account_id": "alice",
+    "current_account_id": "eve",
     "signer_account_id": "bob",
     "signer_account_pk": "15T",
     "predecessor_account_id": "carol",
