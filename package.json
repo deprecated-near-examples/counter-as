@@ -8,36 +8,34 @@
     "deploy:pages": "gh-pages -d src",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "deploy:dev": "yarn build && near dev-deploy",
-    "deploy:dev:init" : "near dev-deploy --init",
     "prestart": "yarn build && yarn deploy:contract",
-    "dev": "yarn deploy:dev:init && yarn deploy:dev && yarn watch",
+    "dev": "yarn deploy:dev && yarn watch",
     "watch": "nodemon --watch assembly -e ts --exec 'CONTRACT_NAME=$(cat neardev/dev-account) parcel src/index.html'",
-    "start": "serve src",
-    "test": "yarn asp:ci && yarn jest",
+    "start": "parcel src/index.html",
+    "test": "yarn asp && yarn jest",
     "test:ci": "NODE_ENV=ci yarn test",
-    "asp:ci": "asp",
-    "asp": "yarn asp:ci --verbose",
+    "asp": "asp --verbose",
     "jest": "yarn build && jest test"
   },
   "devDependencies": {
-    "assemblyscript": "^0.9.2",
-    "gh-pages": "^2.1.1",
-    "jest": "^24.8.0",
-    "jest-environment-node": "^24.8.0",
+    "assemblyscript": "~0.9.2",
+    "gh-pages": "~2.1.1",
+    "jest": "~24.8.0",
+    "jest-environment-node": "~24.8.0",
+    "near-shell": "~0.20.1",
+    "nodemon": "~2.0.2",
     "near-sdk-as": "^0.1.2",
-    "near-shell": "^0.20.1",
-    "nodemon": "^2.0.2",
-    "parcel-bundler": "^1.12.4",
-    "serve": "^11.1.0"
+    "parcel-bundler": "~1.12.4"
   },
   "jest": {
     "testEnvironment": "near-shell/test_environment",
     "testPathIgnorePatterns": [
-      "assembly/*"
+      "<rootDir>/assembly/",
+      "<rootDir>/node_modules/"
     ]
   },
   "dependencies": {
-    "nearlib": "^0.22.0",
-    "regenerator-runtime": "^0.13.3"
+    "nearlib": "~0.22.0",
+    "regenerator-runtime": "~0.13.3"
   }
 }
