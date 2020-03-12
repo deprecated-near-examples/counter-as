@@ -24,5 +24,8 @@ neardev/dev-account
 dist/
 out/
 
+# IDE files
+.idea
+
 
 yarn-error.log
