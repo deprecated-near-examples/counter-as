@@ -5059,29 +5059,31 @@ ncp@^2.0.0:
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
   integrity sha1-GVoh1sRuNh0vsSgbo4uR6d9727M=
 
-near-bindgen-as@^1.3.0-0:
-  version "1.3.0-0"
-  resolved "https://registry.yarnpkg.com/near-bindgen-as/-/near-bindgen-as-1.3.0-0.tgz#9ee96d72d9a5f35191b6eb764d761f2fdd0cd757"
-  integrity sha512-TCQkXEPxuiC6D87dU4DyLluPQyzoZOThKl/Mz+1LV4u7eY3jN9NpaQ+cYa/6pBILvVrSPbqbtX6J+hhV72PqQw==
+near-bindgen-as@^1.3.1-1:
+  version "1.3.1-1"
+  resolved "https://registry.yarnpkg.com/near-bindgen-as/-/near-bindgen-as-1.3.1-1.tgz#67572fd531536147d5f4b697a907da1b063c0281"
+  integrity sha512-kH0wUWx4+lLK/2L5aqjlcM6reXlniUr1YEtHR/GDGyZYyhKJ5NtCvKBAnKQVcVVK1xRsCCqbEmmfykVsf8Y57w==
   dependencies:
-    semver "^7.1.3"
+    near-sdk-as "^0.1.0-1"
 
-near-runtime-ts@^0.7.0-0:
-  version "0.7.0-0"
-  resolved "https://registry.yarnpkg.com/near-runtime-ts/-/near-runtime-ts-0.7.0-0.tgz#78c5b9f9be77ac0d65bacabe09da807273acea10"
-  integrity sha512-Ed+Wvf58GQ56wecAn/6XX7uRorhY547vVKabMzX4SCve6V6QPdzYfAa0UJ6gvRvqn+3DZKabHncciTWY0Ue5vA==
+near-runtime-ts@^0.7.1-1:
+  version "0.7.1-1"
+  resolved "https://registry.yarnpkg.com/near-runtime-ts/-/near-runtime-ts-0.7.1-1.tgz#be20c032465652f432a8d4fd3313b85d297d46c9"
+  integrity sha512-Xi4IJ+7zDpHbeD5ERBFiq/kGPqyUqC61ShXDquKkvFY383kjs420MQkQ/yHFOFtlrF+slbnrL+ghbpKpe6+HaQ==
   dependencies:
-    as-bignum "^0.1.5"
-    assemblyscript-json "^0.3.0"
+    near-sdk-as "^0.1.0-1"
 
-near-sdk-as@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.0.2.tgz#d24d242e63ff33155e67b3ca92df352cc98eba28"
-  integrity sha512-63OIc0aylptQrPgH7DghVIeGx5v144QJOE/zto9JCLuhYVFWQ6dghvPn5mdsWgiRnpkBw+zQ/ptJ+35bqtfyfA==
+near-sdk-as@^0.1.0-1, near-sdk-as@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.1.2.tgz#7f8a29cdf5ad1d620d1831e4902eb3513ac3287a"
+  integrity sha512-/orGJ3wJj4yXmB/YEBp0bcp+CqvQbxM0L9KO1+NZgnBz5SW2wGTMFJ6/SBg/M1BGJei/5Qo2pzpVk22XFDKFjw==
   dependencies:
     "@as-pect/cli" "^3.0.0-beta.0"
-    near-bindgen-as "^1.3.0-0"
-    near-runtime-ts "^0.7.0-0"
+    as-bignum "^0.1.5"
+    assemblyscript-json "^0.3.0"
+    near-bindgen-as "^1.3.1-1"
+    near-runtime-ts "^0.7.1-1"
+    semver "^7.1.3"
     wasm-mock-vm "^1.2.1"
 
 near-shell@^0.20.1:
