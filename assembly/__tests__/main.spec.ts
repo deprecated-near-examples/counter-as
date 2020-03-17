@@ -5,8 +5,7 @@ import {
     decrementCounter
 } from '../main';
 
-import { VM } from "wasm-mock-vm";
-import { context, storage } from 'near-runtime-ts';
+import { context, storage, VM } from 'near-sdk-as';
 
 describe("Counter ", () => {
     it("should increment by one", () => {

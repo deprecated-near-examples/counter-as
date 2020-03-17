@@ -24,7 +24,6 @@
     "jest-environment-node": "~24.8.0",
     "near-shell": "~0.20.1",
     "nodemon": "~2.0.2",
-    "near-sdk-as": "^0.0.2",
     "near-sdk-as": "^0.1.2",
     "parcel-bundler": "~1.12.4"
   },
