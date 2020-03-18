@@ -1,4 +1,4 @@
-import { storage, logging } from "near-runtime-ts";
+import { storage, logging } from "near-sdk-as";
 
 // --- contract code goes below
 
