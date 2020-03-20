@@ -8,10 +8,10 @@ Contract in `assembly/main.ts` provides methods to increment / decrement counter
 Plus and minus buttons increase and decrease value correspondingly. When button L is toggled, counter will add or minus 10 a time. RS button is for reset. LE and RE buttons to let the robot wink to you.
 
 ## To Run
-[![Open in Gitpod!](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nearprotocol/counter) or clone the repo
+[![Open in Gitpod!](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near-examples/counter) or clone the repo
 
 ```
-git clone https://github.com/nearprotocol/counter
+git clone https://github.com/near-examples/counter
 ```
 
 
