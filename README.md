@@ -1,4 +1,9 @@
-# Counter example in AssemblyScript
+Counter example in AssemblyScript
+=================================
+
+[![Open in Gitpod!](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near-examples/counter)
+
+<!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
 
 ## Description
 
@@ -8,7 +13,7 @@ Contract in `assembly/main.ts` provides methods to increment / decrement counter
 Plus and minus buttons increase and decrease value correspondingly. When button L is toggled, counter will add or minus 10 a time. RS button is for reset. LE and RE buttons to let the robot wink to you.
 
 ## To Run
-[![Open in Gitpod!](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/near-examples/counter) or clone the repo
+Open in the Gitpod linke above or clone the repository.
 
 ```
 git clone https://github.com/near-examples/counter
