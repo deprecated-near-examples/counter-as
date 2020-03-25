@@ -10,10 +10,10 @@
     "deploy:dev": "yarn build && near dev-deploy",
     "prestart": "yarn build && yarn deploy:contract",
     "dev": "yarn deploy:dev && yarn watch",
-    "watch": "nodemon --watch assembly -e ts --exec 'CONTRACT_NAME=$(cat neardev/dev-account) parcel src/index.html'",
-    "start": "parcel src/index.html",
+    "watch": "nodemon --watch assembly -e ts --exec \"env-cmd -f ./neardev/dev-account.env parcel src/index.html\"",
+    "start": "env-cmd -f ./neardev/dev-account.env parcel src/index.html",
     "test": "asp && yarn jest",
-    "test:ci": "NODE_ENV=ci yarn test",
+    "test:ci": "env NODE_ENV=ci yarn test",
     "asp": "asp --verbose",
     "jest": "yarn build && jest test"
   },
@@ -25,7 +25,8 @@
     "near-shell": "~0.20.2",
     "nodemon": "~2.0.2",
     "near-sdk-as": "^0.1.2",
-    "parcel-bundler": "~1.12.4"
+    "parcel-bundler": "~1.12.4",
+    "env-cmd": "^10.1.0"
   },
   "jest": {
     "testEnvironment": "near-shell/test_environment",
