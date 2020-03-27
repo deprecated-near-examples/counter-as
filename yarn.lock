@@ -925,7 +925,7 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/environment@^25.1.0", "@jest/environment@^25.2.3":
+"@jest/environment@^25.2.3":
   version "25.2.3"
   resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-25.2.3.tgz#32b3f216355b03e9449b93b62584c18934a2cc4a"
   integrity sha512-zRypAMQnNo8rD0rCbI9+5xf+Lu+uvunKZNBcIWjb3lTATSomKbgYO+GYewGDYn7pf+30XCNBc6SH1rnBUN1ioA==
@@ -934,7 +934,7 @@
     "@jest/types" "^25.2.3"
     jest-mock "^25.2.3"
 
-"@jest/fake-timers@^25.1.0", "@jest/fake-timers@^25.2.3":
+"@jest/fake-timers@^25.2.3":
   version "25.2.3"
   resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-25.2.3.tgz#808a8a761be3baac719311f8bde1362bd1861e65"
   integrity sha512-B6Qxm86fl613MV8egfvh1mRTMu23hMNdOUjzPhKl/4Nm5cceHz6nwLn0nP0sJXI/ue1vu71aLbtkgVBCgc2hYA==
@@ -1028,7 +1028,7 @@
     source-map "^0.6.1"
     write-file-atomic "^3.0.0"
 
-"@jest/types@^25.1.0", "@jest/types@^25.2.3":
+"@jest/types@^25.2.3":
   version "25.2.3"
   resolved "https://registry.yarnpkg.com/@jest/types/-/types-25.2.3.tgz#035c4fb94e2da472f359ff9a211915d59987f6b6"
   integrity sha512-6oLQwO9mKif3Uph3RX5J1i3S7X7xtDHWBaaaoeKw8hOzV6YUd0qDcYcHZ6QXMHDIzSr7zzrEa51o2Ovlj6AtKQ==
@@ -4290,7 +4290,7 @@ jest-environment-jsdom@^25.2.3:
     jest-util "^25.2.3"
     jsdom "^15.2.1"
 
-jest-environment-node@^25.1.0, jest-environment-node@^25.2.3:
+jest-environment-node@^25.1.0, jest-environment-node@^25.2.3, jest-environment-node@~25.2.3:
   version "25.2.3"
   resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-25.2.3.tgz#e50a7e84bf7c7555216aa41aea1e48f53773318f"
   integrity sha512-Tu/wlGXfoLtBR4Ym+isz58z3TJkMYX4VnFTkrsxaTGYAxNLN7ArCwL51Ki0WrMd89v+pbCLDj/hDjrb4a2sOrw==
@@ -4301,17 +4301,6 @@ jest-environment-node@^25.1.0, jest-environment-node@^25.2.3:
     jest-mock "^25.2.3"
     jest-util "^25.2.3"
     semver "^6.3.0"
-
-jest-environment-node@~25.1.0:
-  version "25.1.0"
-  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-25.1.0.tgz#797bd89b378cf0bd794dc8e3dca6ef21126776db"
-  integrity sha512-U9kFWTtAPvhgYY5upnH9rq8qZkj6mYLup5l1caAjjx9uNnkLHN2xgZy5mo4SyLdmrh/EtB9UPpKFShvfQHD0Iw==
-  dependencies:
-    "@jest/environment" "^25.1.0"
-    "@jest/fake-timers" "^25.1.0"
-    "@jest/types" "^25.1.0"
-    jest-mock "^25.1.0"
-    jest-util "^25.1.0"
 
 jest-get-type@^25.2.1:
   version "25.2.1"
@@ -4392,7 +4381,7 @@ jest-message-util@^25.2.3:
     slash "^3.0.0"
     stack-utils "^1.0.1"
 
-jest-mock@^25.1.0, jest-mock@^25.2.3:
+jest-mock@^25.2.3:
   version "25.2.3"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-25.2.3.tgz#b37a581f59d61bd91db27a99bf7eb8b3e5e993d5"
   integrity sha512-xlf+pyY0j47zoCs8zGGOGfWyxxLximE8YFOfEK8s4FruR8DtM/UjNj61um+iDuMAFEBDe1bhCXkqiKoCmWjJzg==
@@ -4511,7 +4500,7 @@ jest-snapshot@^25.2.3:
     pretty-format "^25.2.3"
     semver "^6.3.0"
 
-jest-util@^25.1.0, jest-util@^25.2.3:
+jest-util@^25.2.3:
   version "25.2.3"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-25.2.3.tgz#0abf95a1d6b96f2de5a3ecd61b36c40a182dc256"
   integrity sha512-7tWiMICVSo9lNoObFtqLt9Ezt5exdFlWs5fLe1G4XLY2lEbZc814cw9t4YHScqBkWMfzth8ASHKlYBxiX2rdCw==
