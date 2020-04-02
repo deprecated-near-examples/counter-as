@@ -5134,10 +5134,10 @@ near-sdk-as@^0.1.4:
     semver "^7.1.3"
     wasm-mock-vm "^1.2.1"
 
-near-shell@~0.20.2:
-  version "0.20.2"
-  resolved "https://registry.yarnpkg.com/near-shell/-/near-shell-0.20.2.tgz#a13fc718f3267002a05b8740dfcc0f3c310a6dc2"
-  integrity sha512-E1EVRuTl+h3IF/8rc7RklA1F8PpvBO0LUYE/FSceujD7NSmjt6lh6I2fyR1dhAAsFg/0Z8FS2RQ5Noa8bQ7ooA==
+near-shell@~0.20.4:
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/near-shell/-/near-shell-0.20.4.tgz#70f4533356cb735017ce2f3c17827ac985659af1"
+  integrity sha512-Lx3skMh4YJbph65WnwATmVpEGf/zwSQMkw/wGmN+b160MLFDwmXCJLvzCOvZUk0lf7DPbAV07A+Ey2hRSybDlA==
   dependencies:
     bn "^1.0.5"
     bs58 "^4.0.1"
