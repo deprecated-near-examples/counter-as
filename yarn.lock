@@ -5109,22 +5109,10 @@ near-runtime-ts@^0.7.1-1:
   dependencies:
     near-sdk-as "^0.1.0-1"
 
-near-sdk-as@^0.1.0-1:
-  version "0.1.3"
-  resolved "https://codeload.github.com/near/near-sdk-as/tar.gz/2197a8309bf279388aee9602cc8d5fa0d59bbb79"
-  dependencies:
-    "@as-pect/cli" "^3.1.4"
-    as-bignum "^0.1.5"
-    assemblyscript-json "^0.3.0"
-    near-bindgen-as "^1.3.1-1"
-    near-runtime-ts "^0.7.1-1"
-    semver "^7.1.3"
-    wasm-mock-vm "^1.2.1"
-
-near-sdk-as@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.1.4.tgz#ebde486f4999e83b76db208a8f52841dfb68821d"
-  integrity sha512-Kgi6dk5fq2xL5/g2rUYgUXTppkgml49QGRKcfBWZnaFa1xJGsgrU9rLvC2qfUqsmFQKJKVK83ROx0uYdic5IsQ==
+near-sdk-as@^0.1.0-1, near-sdk-as@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.1.5.tgz#abbc963e3611557c77e8cb966196a1d81489219c"
+  integrity sha512-0gI6jv8Ro1q4SqP2rR8CJE+7k52t/naFS65TwktBuzH2RMh3+yqrAMPP6S1GsVvU9ZC81QXWfkiQqiVVxF9MJg==
   dependencies:
     "@as-pect/cli" "^3.1.4"
     as-bignum "^0.1.5"
