@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime";
-import * as nearlib from "nearlib";
+import * as nearAPIJs from "near-api-js";
 import getConfig from "./config";
 
 let nearConfig = getConfig(process.env.NODE_ENV || "development");
@@ -8,10 +8,10 @@ window.nearConfig = nearConfig;
 // Connects to NEAR and provides `near`, `walletAccount` and `contract` objects in `window` scope
 async function connect() {
   // Initializing connection to the NEAR node.
-  window.near = await nearlib.connect(Object.assign(nearConfig, { deps: { keyStore: new nearlib.keyStores.BrowserLocalStorageKeyStore() }}));
+  window.near = await nearAPIJs.connect(Object.assign(nearConfig, { deps: { keyStore: new nearAPIJs.keyStores.BrowserLocalStorageKeyStore() }}));
 
   // Needed to access wallet login
-  window.walletAccount = new nearlib.WalletAccount(window.near);
+  window.walletAccount = new nearAPIJs.WalletAccount(window.near);
 
   // Initializing our contract APIs by contract name and configuration.
   window.contract = await near.loadContract(nearConfig.contractName, {
