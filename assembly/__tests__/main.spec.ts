@@ -18,6 +18,7 @@ describe("Counter ", () => {
     });
 
     it("should decrement by one", () => {
+        incrementCounter(1);
         decrementCounter(1);
         expect(getCounter()).toBe(0, "counter should be zero after a single decrement.");
     });
@@ -36,30 +37,6 @@ describe("Counter ", () => {
         expect(getCounter()).toBe(4, "1 + 3 = 4");
         decrementCounter(4);
         expect(getCounter()).toBe(0, "4 - 4 = 0");
-    });
-
-    describe("With reset state", () => {
-        // Save the state before all tests
-        beforeAll(() => {
-            VM.saveState();
-        });
-
-        // Restore the state after each test
-        afterEach(() => {
-            VM.restoreState();
-        });
-
-        it("should increment by one and restore VM state after", () => {
-            incrementCounter(1);
-            expect(getCounter()).toBe(1, "0 + 1 = 1");
-        });
-    
-        it("should decrement by one and start at zero", () => {
-            expect(getCounter()).toBe(0, "the state should be restored.")
-            decrementCounter(1)
-            expect(getCounter()).not.toBe(0, "0 - 1 != 0");
-            expect(getCounter()).toBe(-1, "0 - 1 = -1");
-        });
     });
 
     it("should be eve's account", () => {
