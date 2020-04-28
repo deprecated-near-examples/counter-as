@@ -15,7 +15,8 @@
     "test": "asp && yarn jest",
     "test:ci": "env NODE_ENV=ci yarn test",
     "asp": "asp --verbose",
-    "jest": "yarn build && jest test"
+    "jest": "yarn build && jest test",
+    "jest:vm": "jest --env node __tests__/*"
   },
   "devDependencies": {
     "assemblyscript": "~0.9.2",
