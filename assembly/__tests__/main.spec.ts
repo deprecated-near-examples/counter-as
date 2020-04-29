@@ -5,9 +5,13 @@ import {
     decrementCounter
 } from '../main';
 
-import { context, storage } from 'near-sdk-as';
+import {Context, context, storage } from 'near-sdk-as';
 
 describe("Counter ", () => {
+    beforeEach(() => {
+        Context.setCurrent_account_id("eve");
+    });
+
     it("should increment by one", () => {
         incrementCounter(1);
         expect(getCounter()).toBe(1, "counter should be one after a single increment.");
