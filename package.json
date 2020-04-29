@@ -12,7 +12,7 @@
     "dev": "yarn deploy:dev && yarn watch",
     "watch": "nodemon --watch assembly -e ts --exec \"env-cmd -f ./neardev/dev-account.env parcel src/index.html\"",
     "start": "env-cmd -f ./neardev/dev-account.env parcel src/index.html",
-    "test": "asp && && yarn jest:vm && yarn jest",
+    "test": "asp && yarn jest:vm && yarn jest",
     "test:ci": "env NODE_ENV=ci yarn test",
     "asp": "asp --verbose",
     "jest": "yarn build && jest test",
