@@ -1,4 +1,4 @@
-const Runtime = require("near-sdk-as/vm/dist").Runtime;
+const Runtime = require("near-sdk-as/runtime").Runtime;
 const path = require("path");
 
 
