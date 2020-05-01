@@ -5124,10 +5124,10 @@ near-mock-vm@^0.1.0:
     js-base64 "^2.5.2"
     yargs "^15.3.1"
 
-near-sdk-as@^0.2.2-7:
-  version "0.2.2-7"
-  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.2.2-7.tgz#91839cbbc41c65a971dc1da39ba9f0a043e5c35a"
-  integrity sha512-B4pjX+/TGLMvTi3JRsgF00/+e6QZNgeBZIx83jMfuPAE6WQtTGAKVFDmcy9jPAK0VdIeX413IPcL8fdmUh0iRQ==
+near-sdk-as@^0.2.2-8:
+  version "0.2.2-8"
+  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.2.2-8.tgz#46054d3bec6816679a818df3a7cacb3806872287"
+  integrity sha512-kO+sBUSsySRa8vSUxisE9TbBPgBd/nGnvrbE7biHvv4cnJquzGaoUvB/jH+YAaLTA1VsiJArorOESs82iBcOKw==
   dependencies:
     "@as-pect/cli" "^3.1.4"
     as-bignum "^0.1.5"
@@ -5136,7 +5136,7 @@ near-sdk-as@^0.2.2-7:
     bs58 "^4.0.1"
     js-base64 "^2.5.2"
     near-mock-vm "^0.1.0"
-    near-vm "^0.0.7"
+    near-vm "^0.0.8"
     semver "^7.1.3"
     visitor-as "^0.1.0"
 
@@ -5161,10 +5161,10 @@ near-shell@~0.20.8:
     v8flags "^3.1.3"
     yargs "^15.0.1"
 
-near-vm@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/near-vm/-/near-vm-0.0.7.tgz#32bf7ddf9668bb6435b1bdc759075243ac6c2885"
-  integrity sha512-+/QrpWVJRUxlZhPKRX5Rfq2giI/xYn/idF8/I/m5PjOpGR33CGTwHciiEVreD1/Z1Z8/n0ce6uvZvvtn+AVFkg==
+near-vm@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/near-vm/-/near-vm-0.0.8.tgz#9b1cec1fd875886fcbf45333744f81e0f288d795"
+  integrity sha512-w20MTgQ+EZi92qi5hkPTBVVS0+macU4ZqlxIZ/n+W+me2WLl7jg/7OMM1Vg7bpA+V2m9R+BIOchFBTCDrij8Aw==
   dependencies:
     binary-install "^0.0.1"
 
