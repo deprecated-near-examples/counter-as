@@ -1,6 +1,5 @@
-const Runtime = require("near-sdk-as/runtime").Runtime;
+const { Runtime } = require("near-sdk-as/runtime");
 const path = require("path");
-
 
 const contractPath = path.join(__dirname,"../out/main.wasm");
 
@@ -27,8 +26,8 @@ describe('Token', function () {
       expect(endCounter).toEqual(startCounter + 1);
       expect(_endCounter).toEqual(endCounter);
     });
-    it('can be decremented', async function () {
-      contract.call("incrementCounter",{value: 1});
+
+    it('can be decremented', function () {
       const startCounter = getCounter()
       contract.call("decrementCounter",{value: 1});
       const endCounter = getCounter()
