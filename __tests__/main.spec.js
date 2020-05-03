@@ -9,7 +9,7 @@ describe('Token', function () {
   let contract;
 
   function getCounter() {
-    return parseInt(contract.view("getCounter").return_data);
+    return contract.view("getCounter").return_data;
   }
 
   beforeAll(function () {
@@ -20,9 +20,12 @@ describe('Token', function () {
   describe('counter', function () {
     it('can be incremented', function () {
       const startCounter = getCounter() 
+      expect(startCounter).toEqual(0);
       contract.call("incrementCounter",{value: 1});
       const endCounter = getCounter()
+      const _endCounter = contract.state["counter"];
       expect(endCounter).toEqual(startCounter + 1);
+      expect(_endCounter).toEqual(endCounter);
     });
     it('can be decremented', async function () {
       contract.call("incrementCounter",{value: 1});
