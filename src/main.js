@@ -11,7 +11,7 @@ async function connect() {
   window.near = await nearAPI.connect(Object.assign(nearConfig, { deps: { keyStore: new nearAPI.keyStores.BrowserLocalStorageKeyStore() }}));
 
   // Needed to access wallet login
-  window.walletAccount = new nearAPI.WalletAccount(window.near);
+  window.walletAccount = new nearAPI.WalletConnection(window.near);
 
   // Initializing our contract APIs by contract name and configuration.
   window.contract = await near.loadContract(nearConfig.contractName, {
@@ -76,7 +76,7 @@ document.querySelector('#d').addEventListener('click', ()=>{
   document.querySelector('.dot').classList.toggle('on');
   if (document.querySelector('.dot').classList.contains('on')) {
     value = 10;
-  }else { 
+  }else {
     value = 1;
   }
 });
