@@ -5,8 +5,6 @@ github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
     master: true
-    # enable for all branches in this repo (defaults to false)
-    branches: true
     # enable for pull requests coming from this repo (defaults to true)
     pullRequests: true
     # enable for pull requests coming from forks (defaults to false)
@@ -23,9 +21,9 @@ github:
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - before: nvm use default
-    init: yarn && npm install near-shell -g --no-optional
+    init: yarn
     command: gp open README-Gitpod.md && yarn dev
 
 ports:
   - port: 1234
-    onOpen: open-preview
+    onOpen: open-browser
