@@ -19,7 +19,7 @@
   "devDependencies": {
     "assemblyscript": "~0.9.2",
     "env-cmd": "^10.1.0",
-    "jest": "~25.5.4",
+    "jest": "~26.0.1",
     "jest-environment-node": "~26.0.1",
     "near-sdk-as": "^0.2.1",
     "near-shell": "^0.22.0",
