@@ -7,7 +7,7 @@ node_js:
   - 12
 env:
   - NODE_ENV=ci YARN_GPG=no
-  - NODE_ENV=ci-staging YARN_GPG=no
+  - NODE_ENV=ci-betanet YARN_GPG=no
 cache: yarn
 script:
   - yarn build
