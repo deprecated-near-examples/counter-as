@@ -17,7 +17,7 @@
     "jest": "yarn build && jest test"
   },
   "devDependencies": {
-    "assemblyscript": "~0.9.2",
+    "assemblyscript": "~0.12.1",
     "env-cmd": "^10.1.0",
     "jest": "~26.0.1",
     "jest-environment-node": "~26.0.1",
