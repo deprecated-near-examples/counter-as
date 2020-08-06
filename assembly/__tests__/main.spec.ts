@@ -3,7 +3,7 @@ import {
     resetCounter,
     incrementCounter,
     decrementCounter
-} from '../main';
+} from '..';
 
 import { context, storage, VM } from 'near-sdk-as';
 

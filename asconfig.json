@@ -1,0 +1,6 @@
+{
+  "extends" : "near-sdk-as/asconfig.json",
+  "options": {
+    "binaryFile": "out/main.wasm"
+  }
+}
