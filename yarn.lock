@@ -5323,10 +5323,10 @@ near-api-js@^0.29.0:
     text-encoding-utf-8 "^1.0.2"
     tweetnacl "^1.0.1"
 
-near-cli@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/near-cli/-/near-cli-1.0.2.tgz#109323e2bfa640f9b138b13944ecad88ea5cd196"
-  integrity sha512-DsJ7de8y0SACQT0mV32rPQfrn56IbJshFe6XPETShHen9LHAdEiWkYC4EPT8h4WjNjuFl4uTH8WwSvSKl8MGYg==
+near-cli@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/near-cli/-/near-cli-1.0.3.tgz#fe8ac527d6d0372e76719fd67c535caa2bdb6227"
+  integrity sha512-XGpdpjQcJi8R061fM5dNTKjZHNsyC1EaE7LCLZLN+H1tho5Cr6YWyVA4bM0ahiwGT+9FrfPcvqyf2idLqTIIPA==
   dependencies:
     ascii-table "0.0.9"
     bn.js "^5.1.1"
@@ -8037,12 +8037,7 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.0.0.tgz#bc6ccf91b5ff0ac07bbcdbf1c7c4e150db4dbb6c"
-  integrity sha512-jOXGuXZAWdsTH7eZLtyXMqUb9EcWMGZNbL9YcGBJl4MH4nrxHmZJhEHvyLFrkxo+28uLb/NYRcStH48fnD0Vzw==
-
-uuid@^8.3.0:
+uuid@^8.0.0, uuid@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
   integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
