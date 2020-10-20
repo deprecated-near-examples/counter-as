@@ -22,7 +22,7 @@
     "jest-environment-node": "~26.5.2",
     "near-sdk-as": "^0.4.2",
     "near-cli": "^1.2.0",
-    "nodemon": "~2.0.5",
+    "nodemon": "~2.0.6",
     "parcel-bundler": "~1.12.4"
   },
   "jest": {
