@@ -52,7 +52,7 @@ Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR a
 
 ```javascript
 …
-const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */
+const CONTRACT_NAME = 'neardev/dev-account ACCOUNT ID'; /* TODO: fill this in! */
 …
 ```
 
