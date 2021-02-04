@@ -48,7 +48,7 @@ In the project root, login with `near-cli` by following the instructions after t
 near login
 ```
 
-Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR account that was just used to log in.
+Modify the top of `src/config.js`, changing the `CONTRACT_NAME` to be the NEAR account name in the file `neardev/dev-account`. It starts with `dev-`.
 
 ```javascript
 …
