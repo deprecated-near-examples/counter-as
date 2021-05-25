@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "jest": "~27.0.0",
+    "jest": "~27.0.1",
     "jest-environment-node": "~27.0.1",
     "near-sdk-as": "^0.4.2",
     "near-cli": "^2.0.1",
