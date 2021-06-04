@@ -3,7 +3,9 @@
   "description": "Counter Smart Contract\n\nThis project contains implementation of counter backed by blockchain.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
   "version": "0.0.1",
   "scripts": {
-    "build": "node asconfig.js",
+    "build": "asb",
+    "build:wat": "asb --wat",
+    "build:debug": "asb --target debug",
     "deploy:contract": "near deploy",
     "deploy": "yarn build && yarn deploy:contract && yarn deploy:pages",
     "deploy:dev": "yarn build && near dev-deploy",
@@ -20,8 +22,8 @@
     "env-cmd": "^10.1.0",
     "jest": "~27.0.4",
     "jest-environment-node": "~27.0.3",
-    "near-sdk-as": "^0.4.2",
     "near-cli": "^2.0.1",
+    "near-sdk-as": "3.2.0",
     "nodemon": "~2.0.7",
     "parcel-bundler": "~1.12.5"
   },

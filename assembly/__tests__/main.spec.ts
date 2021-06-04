@@ -3,9 +3,9 @@ import {
     resetCounter,
     incrementCounter,
     decrementCounter
-} from '../main';
+} from '..';
 
-import { context, storage, VM } from 'near-sdk-as';
+import { context, storage } from 'near-sdk-as';
 
 describe("Counter ", () => {
     it("should increment by one", () => {
