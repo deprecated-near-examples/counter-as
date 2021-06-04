@@ -26,5 +26,5 @@ jobs:
       - name: test
         env:
           YARN_GPG: no
-          NODE_ENV: "${{ ENV }}"
+          NODE_ENV: ${{ matrix.ENV }}
         run: yarn test
