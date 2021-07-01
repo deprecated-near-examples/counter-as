@@ -5848,7 +5848,7 @@ near-mock-vm@^0.1.1:
     js-base64 "^2.5.2"
     yargs "^15.3.1"
 
-near-sdk-as@^0.4.2:
+near-sdk-as@0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.4.2.tgz#20fb9d6b93d852135a18a948a130a68618c50886"
   integrity sha512-pW3m+HmSBfH0OTEApb4G4F2WWFIRlXyw9ULQeiBx3PYd9TuLOUQWw7rQwIqi+NQ/Ic36VrW57kxgYFy+6JMIRA==
