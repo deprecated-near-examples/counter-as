@@ -24,7 +24,7 @@ git clone https://github.com/near-examples/counter
 Install dependencies:
 
 ```
-yarn
+yarn --frozen-lockfile
 ```
 
 Make sure you have `near-cli` by running:
