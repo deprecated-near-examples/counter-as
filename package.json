@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "near-api-js": "^0.43.1",
+    "near-api-js": "^0.44.2",
     "regenerator-runtime": "^0.13.9"
   }
 }
