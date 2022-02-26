@@ -82,7 +82,7 @@ document.querySelector('#d').addEventListener('click', ()=>{
 });
 // Log in user using NEAR Wallet on "Sign In" button click
 document.querySelector('.sign-in .btn').addEventListener('click', () => {
-  walletAccount.requestSignIn(nearConfig.contractName, 'NEAR Counter Example');
+  walletAccount.requestSignIn({contractId: nearConfig.contractName, methodNames: ['incrementCounter', 'decrementCounter', 'resetCounter'] }, 'NEAR Counter Example');
 });
 
 document.querySelector('.sign-out .btn').addEventListener('click', () => {
