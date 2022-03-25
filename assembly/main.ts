@@ -1,5 +1,6 @@
 import { storage, logging } from "near-sdk-as";
 
+// Public method - Returns the counter value
 export function get_num(): i8 {
   return storage.getPrimitive<i8>("counter", 0);
 }
@@ -26,11 +27,13 @@ export function reset(): void {
   logging.log("Reset counter to zero");
 }
 
+// Private method - Safeguard against overflow
 function safeguard_overflow(): void{
   const value = get_num()
   assert(value < 127, "Counter is at maximum")
 }
 
+// Private method - Safeguard against underflow
 function safeguard_underflow(): void{
   const value = get_num()
   assert(value > -128, "Counter is at minimum")
