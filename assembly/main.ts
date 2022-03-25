@@ -1,24 +1,37 @@
 import { storage, logging } from "near-sdk-as";
 
-// --- contract code goes below
-
-export function incrementCounter(value: i32): void {
-  const newCounter = storage.getPrimitive<i32>("counter", 0) + value;
-  storage.set<i32>("counter", newCounter);
-  logging.log("Counter is now: " + newCounter.toString());
+export function get_num(): i8 {
+  return storage.getPrimitive<i8>("counter", 0);
 }
 
-export function decrementCounter(value: i32): void {
-  const newCounter = storage.getPrimitive<i32>("counter", 0) - value;
-  storage.set<i32>("counter", newCounter);
-  logging.log("Counter is now: " + newCounter.toString());
+// Public method - Increment the counter
+export function increment(): void {
+  safeguard_overflow()
+  const new_value = get_num() + 1;
+  storage.set<i8>("counter", new_value);
+  logging.log("Increased number to " +  new_value.toString());
 }
 
-export function getCounter(): i32 {
-  return storage.getPrimitive<i32>("counter", 0);
+// Public method - Decrement the counter
+export function decrement(): void {
+  safeguard_underflow()
+  const new_value = get_num() - 1;
+  storage.set<i8>("counter", new_value);
+  logging.log("Decreased number to " + new_value.toString());
 }
 
-export function resetCounter(): void {
-  storage.set<i32>("counter", 0);
-  logging.log("Counter is reset!");
+// Public method - Reset to zero
+export function reset(): void {
+  storage.set<i8>("counter", 0);
+  logging.log("Reset counter to zero");
+}
+
+function safeguard_overflow(): void{
+  const value = get_num()
+  assert(value < 127, "Counter is at maximum")
+}
+
+function safeguard_underflow(): void{
+  const value = get_num()
+  assert(value > -127, "Counter is at minimum")
 }

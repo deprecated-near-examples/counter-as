@@ -1,47 +1,49 @@
-import {
-    getCounter,
-    resetCounter,
-    incrementCounter,
-    decrementCounter
-} from '../main';
-
-import { context, storage, VM } from 'near-sdk-as';
+import { get_num, reset, increment, decrement } from '../main';
+import { context, storage } from 'near-sdk-as';
 
 describe("Counter ", () => {
     it("should increment by one", () => {
-        incrementCounter(1);
-        expect(getCounter()).toBe(1, "counter should be one after a single increment.");
+        increment();
+        expect(get_num()).toBe(1, "counter should be one after a single increment.");
     });
 
-    it("getCounter is the same as reading from storage", () => {
-        expect(storage.getPrimitive<i32>("counter", 0)).toBe(getCounter(), "storage.getPrimitive<i32>(\"counter\", 0) = getCounter()");
+    it("get_num is the same as reading from storage", () => {
+        expect(storage.getPrimitive<i8>("counter", 0)).toBe(get_num(), "storage.getPrimitive<i8>(\"counter\", 0) = get_num()");
     });
 
     it("should decrement by one", () => {
-        incrementCounter(1);
-        decrementCounter(1);
-        expect(getCounter()).toBe(0, "counter should be zero after a single decrement.");
+        increment();
+        decrement();
+        expect(get_num()).toBe(0, "counter should be zero after a single decrement.");
     });
 
     it("should be resetable", () => {
-        incrementCounter(1);
-        incrementCounter(1);
-        resetCounter(); // reset to zero
-        expect(getCounter()).toBe(0, "counter should be zero after it is reset."); 
+        increment();
+        increment();
+        reset(); // reset to zero
+        expect(get_num()).toBe(0, "counter should be zero after it is reset.");
     });
-    
+
     it("should increment multiple times and decrement back to zero", () => {
-        incrementCounter(1);
-        expect(getCounter()).toBe(1, "0 + 1 = 1");
-        incrementCounter(3);
-        expect(getCounter()).toBe(4, "1 + 3 = 4");
-        decrementCounter(4);
-        expect(getCounter()).toBe(0, "4 - 4 = 0");
+        increment();
+        expect(get_num()).toBe(1, "increment failed");
+        increment();
+        expect(get_num()).toBe(2, "increment failed");
+        decrement();
+        expect(get_num()).toBe(1, "increment failed");
+    });
+
+    it("should not overflow", () => {
+        storage.set<i8>("counter", 127)
+        expect(() => {increment()}).toThrow();
+    });
+
+    it("should not underflow", () => {
+        storage.set<i8>("counter", -127)
+        expect(() => {decrement()}).toThrow();
     });
 
     it("should be eve's account", () => {
         expect(context.contractName).toBe("eve");
     });
 });
-
-
