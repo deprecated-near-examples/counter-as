@@ -39,7 +39,7 @@ describe("Counter ", () => {
     });
 
     it("should not underflow", () => {
-        storage.set<i8>("counter", -127)
+        storage.set<i8>("counter", -128)
         expect(() => {decrement()}).toThrow();
     });
 

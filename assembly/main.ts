@@ -33,5 +33,5 @@ function safeguard_overflow(): void{
 
 function safeguard_underflow(): void{
   const value = get_num()
-  assert(value > -127, "Counter is at minimum")
+  assert(value > -128, "Counter is at minimum")
 }
