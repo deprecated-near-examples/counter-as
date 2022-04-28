@@ -1,4 +1,4 @@
-import { get_num, reset, increment, decrement } from '../main';
+import { get_num, reset, increment, decrement } from '../index';
 import { context, storage } from 'near-sdk-as';
 
 describe("Counter ", () => {
@@ -17,7 +17,7 @@ describe("Counter ", () => {
         expect(get_num()).toBe(0, "counter should be zero after a single decrement.");
     });
 
-    it("should be resetable", () => {
+    it("should be resettable", () => {
         increment();
         increment();
         reset(); // reset to zero
@@ -41,9 +41,5 @@ describe("Counter ", () => {
     it("should not underflow", () => {
         storage.set<i8>("counter", -128)
         expect(() => {decrement()}).toThrow();
-    });
-
-    it("should be eve's account", () => {
-        expect(context.contractName).toBe("eve");
     });
 });
