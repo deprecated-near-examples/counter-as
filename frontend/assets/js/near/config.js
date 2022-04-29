@@ -1,5 +1,5 @@
-/* Note: Change this to your account */
-const CONTRACT_NAME = process.env.CONTRACT_NAME || 'change_this_account';
+// Once you deploy the contract to its final account, make sure to specify it here
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'change_this_account'; /* TODO: Change this to the deployed account */
 
 function getConfig (env) {
   switch (env) {
