@@ -26,6 +26,7 @@ neardev/dev-account
 dist/
 out/
 *.lock
+*-lock.json
 
 # IDE files
 .idea

@@ -7,6 +7,8 @@
     "build": "asb",
     "test": "asp --nologo"
   },
-  "dependencies": {},
+  "dependencies": {
+    "near-sdk-as": "^3.2.3"
+  },
   "devDependencies": {}
 }
