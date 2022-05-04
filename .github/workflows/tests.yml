@@ -7,16 +7,21 @@ jobs:
   tests:
     strategy:
       matrix:
-        platform: [ubuntu-latest, macos-latest, windows-latest]
+        platform: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout branch
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v2
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
         with:
-          node-version: '12'
+          toolchain: stable
+          target: wasm32-unknown-unknown
       - name: Install modules
-        run: yarn install --frozen-lockfile
-      - name: Build and run tests
-        env:
-          IS_GITHUB_ACTION: true
-        run: yarn test
+        run: yarn
+      - name: Run unit tests
+        run: yarn test:unit
+      - name: Run integration tests
+        run: yarn test:integration

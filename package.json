@@ -10,7 +10,7 @@
     "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\"",
     "test": "npm run test:unit && jest test --runInBand",
-    "test:unit": "npm run build && cd contract && npm run test ",
+    "test:unit": "npm run build && cd contract && npm run test",
     "test:integration": "npm run build && npm run test:integration:rs && npm run test:integration:ts",
     "test:integration:rs": "cd integration-tests/rs && cargo run --example increment && cargo run --example decrement && cargo run --example reset",
     "test:integration:ts": "ava --verbose"
