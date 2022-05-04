@@ -13,20 +13,10 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "jest": "~28.0.2",
-    "jest-environment-node": "~28.0.2",
     "near-sdk-as": "3.2.3",
     "near-cli": "^3.2.0",
     "nodemon": "~2.0.15",
-    "parcel-bundler": "~1.12.5",
-    "shelljs": "~0.8.4"
-  },
-  "jest": {
-    "testEnvironment": "near-cli/test_environment",
-    "testPathIgnorePatterns": [
-      "<rootDir>/contract/",
-      "<rootDir>/node_modules/"
-    ]
+    "parcel-bundler": "~1.12.5"
   },
   "dependencies": {
     "near-api-js": "^0.44.2",
