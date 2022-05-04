@@ -1,0 +1,34 @@
+{
+  "name": "counter",
+  "description": "Counter Smart Contract\n\nThis project contains implementation of counter backed by blockchain.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd contract && node ./compile.js",
+    "deploy": "npm run build && near dev-deploy",
+    "test": "npm run build && cd contract && npm run test && cd .. && jest test --runInBand",
+    "jest": "npm run build && jest test --runInBand",
+    "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
+    "dev": "nodemon --watch contract -e ts --exec \"npm run start\""
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "~28.0.2",
+    "jest-environment-node": "~28.0.2",
+    "near-sdk-as": "3.2.3",
+    "near-cli": "^3.2.0",
+    "nodemon": "~2.0.15",
+    "parcel-bundler": "~1.12.5",
+    "shelljs": "~0.8.4"
+  },
+  "jest": {
+    "testEnvironment": "near-cli/test_environment",
+    "testPathIgnorePatterns": [
+      "<rootDir>/contract/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "near-api-js": "^0.44.2",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

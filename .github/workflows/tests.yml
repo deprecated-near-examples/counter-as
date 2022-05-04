@@ -1,0 +1,22 @@
+name: Tests
+on: 
+  repository_dispatch:
+    types: [tests-report]
+  push:
+jobs:
+  tests:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - name: Install modules
+        run: yarn install --frozen-lockfile
+      - name: Build and run tests
+        env:
+          IS_GITHUB_ACTION: true
+        run: yarn test
