@@ -1,11 +1,11 @@
 {
   "name": "counter",
   "description": "Counter Smart Contract\n\nThis project contains implementation of counter backed by blockchain.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
-    "build": "cd contract && node ./compile.js",
+    "build": "cd contract && npm run build && mkdir -p out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ./out/counter.wasm",
     "deploy": "npm run build && near dev-deploy",
-    "test": "npm run build && cd contract && npm run test && cd .. && jest test --runInBand",
+    "test": "npm run build && cd contract && npm i && npm run test && cd .. && jest test --runInBand",
     "jest": "npm run build && jest test --runInBand",
     "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\""
