@@ -9,9 +9,9 @@
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\"",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "npm run build && cd contract && npm i && npm run test",
-    "test:integration": "npm run build && npm run test:integration:ts && npm run test:integration:rs",
-    "test:integration:ts": "ava --verbose",
-    "test:integration:rs": "cd integration-tests/rs && cargo run --example increment && cargo run --example decrement && cargo run --example reset"
+    "test:integration": "npm run test:integration:ts && npm run test:integration:rs",
+    "test:integration:ts": "npm run build && ava --verbose",
+    "test:integration:rs": "npm run build && cd integration-tests/rs && cargo run --example increment && cargo run --example decrement && cargo run --example reset"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
