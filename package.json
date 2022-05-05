@@ -3,13 +3,13 @@
   "description": "Counter Smart Contract\n\nThis project contains implementation of counter backed by blockchain.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
   "version": "1.1.0",
   "scripts": {
-    "build": "cd contract && npm run build && mkdir -p out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ./out/counter.wasm",
+    "build": "cd contract && npm run build && mkdir -p ../out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ../out/counter.wasm",
     "deploy": "npm run build && near dev-deploy",
     "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\"",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "npm run build && cd contract && npm i && npm run test",
-    "test:integration": "npm run test:integration:ts && npm run test:integration:rs",
+    "test:integration": "npm run build && npm run test:integration:ts && npm run test:integration:rs",
     "test:integration:ts": "ava --verbose",
     "test:integration:rs": "cd integration-tests/rs && cargo run --example increment && cargo run --example decrement && cargo run --example reset"
   },
@@ -18,7 +18,9 @@
     "near-sdk-as": "3.2.3",
     "near-cli": "^3.2.0",
     "nodemon": "~2.0.15",
-    "parcel-bundler": "~1.12.5"
+    "parcel-bundler": "~1.12.5",
+    "ava": "^4.2.0",
+    "near-workspaces": "^2.0.0"
   },
   "dependencies": {
     "near-api-js": "^0.44.2",
