@@ -65,9 +65,7 @@ yarn start
 ## To Test
 
 ```
-yarn asp  # as-pect tests
-NODE_ENV=ci yarn jest # jest tests
-NODE_ENV=ci yarn test # both
+yarn test
 ```
 
 ## To Explore
