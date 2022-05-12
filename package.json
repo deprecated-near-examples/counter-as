@@ -1,6 +1,6 @@
 {
   "name": "counter",
-  "description": "Counter Smart Contract\n\nThis project contains implementation of counter backed by blockchain.\n\n[AssemblyScript](https://github.com/AssemblyScript/assemblyscript) compiles strictly typed TypeScript to WebAssembly using Binaryen. See the [AssemblyScript wiki](https://github.com/AssemblyScript/assemblyscript/wiki) for further instructions and documentation.",
+  "description": "An Assemblyscript counter that lives in the NEAR blockchain",
   "version": "1.1.0",
   "scripts": {
     "build": "cd contract && npm run build && mkdir -p ../out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ../out/counter.wasm",
