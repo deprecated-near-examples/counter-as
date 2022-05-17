@@ -3,7 +3,7 @@
   "description": "An Assemblyscript counter that lives in the NEAR blockchain",
   "version": "1.1.0",
   "scripts": {
-    "build": "cd contract && npm run build && mkdir -p ../out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ../out/counter.wasm",
+    "build": "cd contract && npm run build && mkdir -p ../out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ../out/main.wasm",
     "deploy": "npm run build && near dev-deploy",
     "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\"",
@@ -14,7 +14,6 @@
     "test:integration:rs": "npm run build && cd integration-tests/rs && cargo run --example integration-tests"
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0",
     "near-sdk-as": "3.2.3",
     "near-cli": "^3.2.0",
     "nodemon": "~2.0.15",
