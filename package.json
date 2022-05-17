@@ -4,14 +4,14 @@
   "version": "1.1.0",
   "scripts": {
     "build": "cd contract && npm run build && mkdir -p ../out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ../out/main.wasm",
-    "deploy": "npm run build && near dev-deploy",
+    "deploy": "near dev-deploy",
     "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\"",
-    "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "npm run build && cd contract && npm i && npm run test",
-    "test:integration": "npm run test:integration:ts && npm run test:integration:rs",
-    "test:integration:ts": "npm run build && ava --verbose",
-    "test:integration:rs": "npm run build && cd integration-tests/rs && cargo run --example integration-tests"
+    "test": "npm run build && npm run test:unit && npm run test:integration",
+      "test:unit": "cd contract && npm i && npm run test",
+      "test:integration": "npm run test:integration:ts && npm run test:integration:rs",
+        "test:integration:ts": "ava --verbose",
+        "test:integration:rs": "cd integration-tests/rs && cargo run --example integration-tests"
   },
   "devDependencies": {
     "near-sdk-as": "3.2.3",
