@@ -21,7 +21,5 @@ jobs:
           target: wasm32-unknown-unknown
       - name: Install modules
         run: yarn
-      - name: Run unit tests
-        run: yarn test:unit
-      - name: Run integration tests
-        run: yarn test:integration
+      - name: Run tests
+        run: yarn test
