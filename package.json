@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "scripts": {
     "build": "cd contract && npm run build && mkdir -p ../out && rm -f ./out/counter.wasm && cp ./build/release/counter_contract.wasm ../out/main.wasm",
-    "deploy": "near dev-deploy",
+    "deploy": "npm run build && near dev-deploy",
     "start": "npm run deploy && echo The app is starting! && env-cmd -f ./neardev/dev-account.env parcel frontend/index.html --open",
     "dev": "nodemon --watch contract -e ts --exec \"npm run start\"",
     "test": "npm run build && npm run test:unit && npm run test:integration",
