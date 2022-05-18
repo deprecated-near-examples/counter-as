@@ -3,7 +3,6 @@ import { initContract, login, logout, getCounter, counterIncrement,
          counterDecrement, counterReset } from './near/utils'
 
 function resetUI(){
-  document.querySelector('button').disabled = true;
   document.querySelector('#show').classList.replace('number','loader');
   document.querySelector('#show').innerText = '';
 }
@@ -52,17 +51,19 @@ function flow(){
   }else{
     signedOutFlow()
   }
+  updateUI()
 }
 
 // Display the signed-out-flow container
 function signedOutFlow() {
   document.querySelector('.sign-in').style.display = 'block';
+  document.querySelectorAll('.interact').forEach(button => button.disabled = true)
 }
 
 // Displaying the signed in flow container and display counter
 async function signedInFlow() {
-  document.querySelector('.after-sign-in').style.display = 'block';
-  await updateUI()
+  document.querySelector('.sign-out').style.display = 'block';
+  document.querySelectorAll('.interact').forEach(button => button.disabled = false)
 }
 
 async function updateUI(){
@@ -71,7 +72,6 @@ async function updateUI(){
   document.querySelector('#show').classList.replace('loader','number');
   document.querySelector('#show').innerText = count === undefined ? 'calculating...' : count;
   document.querySelector('#left').classList.toggle('eye');
-  document.querySelector('button').disabled = false;
 
   if (count >= 0) {
     document.querySelector('.mouth').classList.replace('cry','smile');
